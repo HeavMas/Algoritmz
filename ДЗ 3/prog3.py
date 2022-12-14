@@ -4,9 +4,6 @@
 def F(root):
     stack = [(root, 0)]
     deep = []
-    k = [0] * max(deep)
-    For_print = [0] * max(deep)
-    Final_ans = [0] * max(deep)
     while stack:
         value, leng = stack.pop()
         if value.left == None and value.right == None:
@@ -15,6 +12,9 @@ def F(root):
             stack.append((value.left, leng + 1))
         if value.right != None:
             stack.append((value.right, leng + 1))
+    k = [0] * max(deep)
+    For_print = [0] * max(deep)
+    Final_ans = [0] * max(deep)
     stack = [(root, 0)]
     while stack:
         value, leng = stack.pop()
